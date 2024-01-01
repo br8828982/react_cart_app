@@ -18,6 +18,7 @@ export const cartReducer = (state: CartItemType[], action: CartAction) => {
           : item
       );
     }
+
     case CartActionTypes.DECREASE_QUANTITY: {
       const lastItem =
         state.find((item) => item.id === action.payload.id)?.quantity === 1;
@@ -32,9 +33,11 @@ export const cartReducer = (state: CartItemType[], action: CartAction) => {
           : item
       );
     }
+
     case CartActionTypes.REMOVE_FROM_CART: {
       return state.filter((item) => item.id !== action.payload.id);
     }
+
     default:
       return state;
   }
