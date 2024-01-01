@@ -4,7 +4,7 @@ import { CartItemControlsProps } from "../types/CartTypes";
 export function CartItemControls({ id }: CartItemControlsProps) {
   const { getItemQuantity, increaseQuantity, decreaseQuantity } =
     useCartContext();
-  
+
   const quantity = getItemQuantity(id);
 
   if (quantity < 1) {
