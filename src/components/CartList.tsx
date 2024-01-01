@@ -2,7 +2,11 @@ import { useCartContext } from "../hooks/useCartContext";
 import { CartItem } from "./CartItem";
 
 export function CartList() {
-  const { cartItems } = useCartContext();
+  const { totalQuantity, cartItems } = useCartContext();
+
+  if (totalQuantity === 0) {
+    return <p>The cart is empty</p>;
+  }
 
   return (
     <>
