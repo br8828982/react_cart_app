@@ -2,6 +2,7 @@ import { createContext, ReactNode, useReducer } from "react";
 import {
   CartActionTypes,
   CartContextType,
+  CartProviderProps,
   CartItemType,
 } from "../types/CartTypes";
 import { cartReducer, initialState } from "../store/cartReducer";
@@ -11,11 +12,7 @@ export const CartContext = createContext<CartContextType | undefined>(
   undefined
 );
 
-interface ShoppingCartProviderProps {
-  children: ReactNode;
-}
-
-export function CartProvider({ children }: ShoppingCartProviderProps) {
+export function CartProvider({ children }: CartProviderProps) {
   const [cartItems, dispatch] = useReducer(cartReducer, initialState);
 
   const getItemById = (id: CartItemType["id"]) => {
