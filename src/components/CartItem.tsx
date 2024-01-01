@@ -3,6 +3,7 @@ import { useCartContext } from "../hooks/useCartContext";
 
 export function CartItem({ id, quantity }: CartItemType) {
   const { getItemById, removeFromCart } = useCartContext();
+  
   const item = getItemById(id);
 
   if (item === null) return null;
