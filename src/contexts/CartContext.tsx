@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useReducer } from "react";
+import { createContext, useReducer } from "react";
 import {
   CartActionTypes,
   CartContextType,
@@ -8,8 +8,8 @@ import {
 import { cartReducer, initialState } from "../store/cartReducer";
 import { storeItems } from "../data/items";
 
-export const CartContext = createContext<CartContextType | undefined>(
-  undefined
+export const CartContext = createContext<CartContextType | null>(
+  null
 );
 
 export function CartProvider({ children }: CartProviderProps) {
