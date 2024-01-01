@@ -1,4 +1,3 @@
-import "./App.css";
 import { CartApp } from "./components/CartApp";
 import { CartProvider } from "./contexts/CartContext";
 
