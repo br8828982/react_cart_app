@@ -9,13 +9,10 @@ export function CartList() {
   }
 
   return (
-    <>
-      <h2>Cart</h2>
-      <ul>
-        {cartItems.map((item) => (
-          <CartItem key={item.id} {...item} />
-        ))}
-      </ul>
-    </>
+    <ul>
+      {cartItems.map((item) => (
+        <CartItem key={item.id} {...item} />
+      ))}
+    </ul>
   );
 }
