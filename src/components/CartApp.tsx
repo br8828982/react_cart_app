@@ -6,9 +6,9 @@ export function CartApp() {
   return (
     <>
       <h1>Shopping Cart</h1>
-        <StoreList />
-        <CartList />
-        <CartInfo />
+      <StoreList />
+      <CartList />
+      <CartInfo />
     </>
   );
 }
