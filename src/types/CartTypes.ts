@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import { StoreItemType } from "./StoreTypes";
 
 export interface CartItemType {
@@ -18,6 +19,10 @@ export interface CartContextType {
   totalQuantity: number;
   totalPrice: number;
   getItemById: (id: CartItemType["id"]) => StoreItemType | null;
+}
+
+export interface CartProviderProps {
+  children: ReactNode;
 }
 
 export enum CartActionTypes {
